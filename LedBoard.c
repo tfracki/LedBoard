@@ -3,6 +3,7 @@
 
 #include <util/delay.h>
 #include "LedBoard.h"
+#include "LCDControl.h"
 
 #define F_CPU 1000000
 
@@ -305,6 +306,9 @@ void mode3() {
 int main(void)
 {
   configuration();
+  LCDInit();
+  LCDClear();
+  LCDHome();
 
   for(;;)
   {
